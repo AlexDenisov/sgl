@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46F3033C1982BD1600536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3033B1982BD1600536129 /* main.swift */; };
 		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
+		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
+		46F303671982D15900536129 /* array_specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303661982D15900536129 /* array_specs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		46F303361982BD1600536129 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		46F303541982BE0000536129 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,21 +57,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		46F303381982BD1600536129 /* Castalia */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Castalia; sourceTree = BUILT_PRODUCTS_DIR; };
-		46F3033B1982BD1600536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		46F303431982BDE000536129 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
 		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		46F303631982D0E600536129 /* array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array.swift; sourceTree = "<group>"; };
+		46F303661982D15900536129 /* array_specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_specs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46F303351982BD1600536129 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		46F303531982BE0000536129 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,7 +89,6 @@
 		46F303391982BD1600536129 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46F303381982BD1600536129 /* Castalia */,
 				46F303561982BE0000536129 /* Specs */,
 			);
 			name = Products;
@@ -113,7 +97,7 @@
 		46F3033A1982BD1600536129 /* Castalia */ = {
 			isa = PBXGroup;
 			children = (
-				46F3033B1982BD1600536129 /* main.swift */,
+				46F303621982D0BF00536129 /* Collections */,
 			);
 			path = Castalia;
 			sourceTree = "<group>";
@@ -140,31 +124,31 @@
 		46F303571982BE0000536129 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				46F303651982D14400536129 /* Collections */,
 				46F303581982BE0000536129 /* main.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
 		};
+		46F303621982D0BF00536129 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				46F303631982D0E600536129 /* array.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		46F303651982D14400536129 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				46F303661982D15900536129 /* array_specs.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		46F303371982BD1600536129 /* Castalia */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46F3033F1982BD1600536129 /* Build configuration list for PBXNativeTarget "Castalia" */;
-			buildPhases = (
-				46F303341982BD1600536129 /* Sources */,
-				46F303351982BD1600536129 /* Frameworks */,
-				46F303361982BD1600536129 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Castalia;
-			productName = Castalia;
-			productReference = 46F303381982BD1600536129 /* Castalia */;
-			productType = "com.apple.product-type.tool";
-		};
 		46F303551982BE0000536129 /* Specs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46F3035A1982BE0000536129 /* Build configuration list for PBXNativeTarget "Specs" */;
@@ -189,11 +173,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = okolodev;
+				ORGANIZATIONNAME = AlexDenisov;
 				TargetAttributes = {
-					46F303371982BD1600536129 = {
-						CreatedOnToolsVersion = 6.0;
-					};
 					46F303551982BE0000536129 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -217,7 +198,6 @@
 			);
 			projectRoot = "";
 			targets = (
-				46F303371982BD1600536129 /* Castalia */,
 				46F303551982BE0000536129 /* Specs */,
 			);
 		};
@@ -255,19 +235,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46F303341982BD1600536129 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46F3033C1982BD1600536129 /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		46F303521982BE0000536129 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				46F303591982BE0000536129 /* main.swift in Sources */,
+				46F303641982D0E600536129 /* array.swift in Sources */,
+				46F303671982D15900536129 /* array_specs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,20 +323,6 @@
 			};
 			name = Release;
 		};
-		46F303401982BD1600536129 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		46F303411982BD1600536129 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		46F3035B1982BE0000536129 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -392,14 +352,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		46F3033F1982BD1600536129 /* Build configuration list for PBXNativeTarget "Castalia" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46F303401982BD1600536129 /* Debug */,
-				46F303411982BD1600536129 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		46F3035A1982BE0000536129 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
