@@ -8,10 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		46F3033C1982BD1600536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3033B1982BD1600536129 /* main.swift */; };
+		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
+		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46F3034A1982BDE000536129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F303431982BDE000536129 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46718B56194B6A2C006E8A18;
+			remoteInfo = Sleipnir;
+		};
+		46F3034C1982BDE000536129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F303431982BDE000536129 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4640EB84196942AF00AE5952;
+			remoteInfo = "Sleipnir-iOS";
+		};
+		46F3034E1982BDE000536129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F303431982BDE000536129 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4640EBB51969440500AE5952;
+			remoteInfo = "Sleipnir-OSX";
+		};
+		46F303501982BDE000536129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F303431982BDE000536129 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 314AE5C1196D78DA00CA7ED7;
+			remoteInfo = Spec;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		46F303361982BD1600536129 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		46F303541982BE0000536129 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,6 +67,9 @@
 /* Begin PBXFileReference section */
 		46F303381982BD1600536129 /* Castalia */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Castalia; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F3033B1982BD1600536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		46F303431982BDE000536129 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
+		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,13 +80,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46F303531982BE0000536129 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		46F3032F1982BD1600536129 = {
 			isa = PBXGroup;
 			children = (
+				46F303421982BDC400536129 /* ThirdParty */,
 				46F3033A1982BD1600536129 /* Castalia */,
+				46F303571982BE0000536129 /* Specs */,
 				46F303391982BD1600536129 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				46F303381982BD1600536129 /* Castalia */,
+				46F303561982BE0000536129 /* Specs */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +116,33 @@
 				46F3033B1982BD1600536129 /* main.swift */,
 			);
 			path = Castalia;
+			sourceTree = "<group>";
+		};
+		46F303421982BDC400536129 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				46F303431982BDE000536129 /* Sleipnir.xcodeproj */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		46F303441982BDE000536129 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46F3034B1982BDE000536129 /* Sleipnir */,
+				46F3034D1982BDE000536129 /* Sleipnir.framework */,
+				46F3034F1982BDE000536129 /* Sleipnir.framework */,
+				46F303511982BDE000536129 /* Spec */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46F303571982BE0000536129 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				46F303581982BE0000536129 /* main.swift */,
+			);
+			path = Specs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +165,23 @@
 			productReference = 46F303381982BD1600536129 /* Castalia */;
 			productType = "com.apple.product-type.tool";
 		};
+		46F303551982BE0000536129 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F3035A1982BE0000536129 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				46F303521982BE0000536129 /* Sources */,
+				46F303531982BE0000536129 /* Frameworks */,
+				46F303541982BE0000536129 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 46F303561982BE0000536129 /* Specs */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -89,9 +189,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = railsware;
+				ORGANIZATIONNAME = okolodev;
 				TargetAttributes = {
 					46F303371982BD1600536129 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					46F303551982BE0000536129 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -106,12 +209,50 @@
 			mainGroup = 46F3032F1982BD1600536129;
 			productRefGroup = 46F303391982BD1600536129 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 46F303441982BDE000536129 /* Products */;
+					ProjectRef = 46F303431982BDE000536129 /* Sleipnir.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				46F303371982BD1600536129 /* Castalia */,
+				46F303551982BE0000536129 /* Specs */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		46F3034B1982BDE000536129 /* Sleipnir */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Sleipnir;
+			remoteRef = 46F3034A1982BDE000536129 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		46F3034D1982BDE000536129 /* Sleipnir.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sleipnir.framework;
+			remoteRef = 46F3034C1982BDE000536129 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		46F3034F1982BDE000536129 /* Sleipnir.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sleipnir.framework;
+			remoteRef = 46F3034E1982BDE000536129 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		46F303511982BDE000536129 /* Spec */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Spec;
+			remoteRef = 46F303501982BDE000536129 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46F303341982BD1600536129 /* Sources */ = {
@@ -119,6 +260,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F3033C1982BD1600536129 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F303521982BE0000536129 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F303591982BE0000536129 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +363,24 @@
 			};
 			name = Release;
 		};
+		46F3035B1982BE0000536129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46F3035C1982BE0000536129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -231,6 +398,14 @@
 			buildConfigurations = (
 				46F303401982BD1600536129 /* Debug */,
 				46F303411982BD1600536129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46F3035A1982BE0000536129 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F3035B1982BE0000536129 /* Debug */,
+				46F3035C1982BE0000536129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

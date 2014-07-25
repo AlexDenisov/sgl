@@ -1,0 +1,3 @@
+[submodule "ThirdParty/Sleipnir"]
+	path = ThirdParty/Sleipnir
+	url = https://github.com/railsware/sleipnir
