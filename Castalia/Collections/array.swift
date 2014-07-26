@@ -10,13 +10,6 @@ import Foundation
 
 /* 
 TODO:
-    operators:
-        ==
-        !=
-        <
-        >
-        <=
-        >=
 
     iterators:
         begin
@@ -26,7 +19,7 @@ TODO:
 
 */
 
-public class array<T: EqualityComparable> : EqualityComparable
+public class array<T: CastaliaComparable> : CastaliaComparable
 {
     lazy var backingStorage : [T] = [T]()
     
@@ -89,7 +82,7 @@ public class array<T: EqualityComparable> : EqualityComparable
     
 }
 
-public func ==<T: EqualityComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func == <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     if lhs.size() != rhs.size() {
         return false
     }
@@ -103,6 +96,37 @@ public func ==<T: EqualityComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return true
 }
 
-public func !=<T: EqualityComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func != <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return !(lhs == rhs)
+}
+
+
+public func < <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+    if (lhs.size() < rhs.size()) {
+        return true
+    }
+    
+    if (lhs.size() > rhs.size()) {
+        return false
+    }
+    
+    for index in 0 ..< lhs.size() {
+        if lhs[index]! < rhs[index]! {
+            return true
+        }
+    }
+    
+    return false
+}
+
+public func > <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+    return !(lhs < rhs) && !(lhs == rhs)
+}
+
+public func <= <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+    return (lhs < rhs) || (lhs == rhs)
+}
+
+public func >= <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+    return !(lhs < rhs) || (lhs == rhs)
 }

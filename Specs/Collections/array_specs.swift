@@ -184,7 +184,7 @@ class array_specs : SleipnirSpec {
             
             context("inequality") {
                 
-                it("of non equal arrays") {
+                it("of non-equal arrays") {
                     subject = array<Int>(1, 2, 3, 4)
                     rhs = array<Int>(1, 2, 3)
                     var equal = rhs != subject
@@ -203,6 +203,210 @@ class array_specs : SleipnirSpec {
                     rhs = array<Int>(1, 2, 3)
                     var equal = rhs != subject
                     expect(equal).to(beFalse())
+                }
+                
+            }
+            
+            context("less than") {
+                
+                context("when array less than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3, 4)
+                        var result = subject < rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(2, 2, 3)
+                        var result = subject < rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                }
+                
+                context("when array not less than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3, 4)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject < rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(2, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject < rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                }
+                
+                context("when arrays equal") {
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject < rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                }
+                
+            }
+            
+            context("greater than") {
+                
+                context("when array greater than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3, 4)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject > rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(2, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject > rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                }
+                
+                context("when array not greater than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3, 4)
+                        var result = subject > rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(2, 2, 3)
+                        var result = subject > rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                }
+                
+                context("when arrays equal") {
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject > rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                }
+                
+            }
+            
+            context("less than or equal") {
+                
+                context("when array less than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3, 4)
+                        var result = subject <= rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(2, 2, 3)
+                        var result = subject <= rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                }
+                
+                context("when array not less than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3, 4)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject <= rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(2, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject <= rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                }
+                
+                context("when arrays equal") {
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject <= rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                }
+                
+            }
+            
+            context("greater than or equal") {
+                
+                context("when array greater than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3, 4)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject >= rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(2, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject >= rhs
+                        expect(result).to(beTrue())
+                    }
+                    
+                }
+                
+                context("when array not greater than") {
+                    
+                    it("by size") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3, 4)
+                        var result = subject >= rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(2, 2, 3)
+                        var result = subject >= rhs
+                        expect(result).to(beFalse())
+                    }
+                    
+                }
+                
+                context("when arrays equal") {
+                    
+                    it("by value") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(1, 2, 3)
+                        var result = subject >= rhs
+                        expect(result).to(beTrue())
+                    }
+                    
                 }
                 
             }

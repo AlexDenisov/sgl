@@ -11,8 +11,8 @@
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
 		46F303671982D15900536129 /* array_specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303661982D15900536129 /* array_specs.swift */; };
-		46F3037219839C6F00536129 /* EqualityComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3037119839C6F00536129 /* EqualityComparable.swift */; };
 		46F303751983A50000536129 /* IntExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303741983A50000536129 /* IntExt.swift */; };
+		46F303781983BAAF00536129 /* CastaliaComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303771983BAAF00536129 /* CastaliaComparable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +64,8 @@
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		46F303631982D0E600536129 /* array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array.swift; sourceTree = "<group>"; };
 		46F303661982D15900536129 /* array_specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_specs.swift; sourceTree = "<group>"; };
-		46F3037119839C6F00536129 /* EqualityComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualityComparable.swift; sourceTree = "<group>"; };
 		46F303741983A50000536129 /* IntExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExt.swift; sourceTree = "<group>"; };
+		46F303771983BAAF00536129 /* CastaliaComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastaliaComparable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,7 @@
 		46F3033A1982BD1600536129 /* Castalia */ = {
 			isa = PBXGroup;
 			children = (
+				46F303761983BA6A00536129 /* Protocols */,
 				46F303731983A39800536129 /* Ext */,
 				46F303621982D0BF00536129 /* Collections */,
 			);
@@ -139,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				46F303631982D0E600536129 /* array.swift */,
-				46F3037119839C6F00536129 /* EqualityComparable.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -157,7 +157,15 @@
 			children = (
 				46F303741983A50000536129 /* IntExt.swift */,
 			);
-			name = Ext;
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		46F303761983BA6A00536129 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				46F303771983BAAF00536129 /* CastaliaComparable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +264,7 @@
 				46F303591982BE0000536129 /* main.swift in Sources */,
 				46F303751983A50000536129 /* IntExt.swift in Sources */,
 				46F303641982D0E600536129 /* array.swift in Sources */,
-				46F3037219839C6F00536129 /* EqualityComparable.swift in Sources */,
+				46F303781983BAAF00536129 /* CastaliaComparable.swift in Sources */,
 				46F303671982D15900536129 /* array_specs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

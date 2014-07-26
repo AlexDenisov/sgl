@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Int: EqualityComparable {
+extension Int: CastaliaComparable {
 
 }
