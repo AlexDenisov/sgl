@@ -12,21 +12,39 @@ import Foundation
 TODO:
 
     iterators:
-        begin
-        end
         rbegin
         rend
-
 */
 
 public class array<T: CastaliaComparable> : CastaliaComparable
 {
-    lazy var backingStorage : [T] = [T]()
+    public typealias iterator = random_access_iterator<T>
+    
+    lazy var backingStorage : [node<T>] = [node<T>]()
+    var head: node<T>?
+    var tail: node<T>?
+
+    /// TODO: cleanup
+    var end_node: node<T>?
     
     init(_ args: T...) {
         for arg in args {
-            backingStorage.append(arg)
+            add(arg)
         }
+    }
+    
+    func add(value: T) {
+        var newNode = node(value)
+        if !head {
+            head = newNode
+            end_node = node()
+        } else {
+            tail!.next = newNode
+        }
+        newNode.prev = tail
+        tail = newNode
+        tail!.next = end_node
+        backingStorage.append(newNode)
     }
     
     public func empty() -> Bool {
@@ -45,7 +63,7 @@ public class array<T: CastaliaComparable> : CastaliaComparable
     
     public func at(position: Int) -> T? {
         if position < self.size() && !self.empty() {
-            return backingStorage[position]
+            return backingStorage[position].value
         }
         
         return nil
@@ -53,7 +71,7 @@ public class array<T: CastaliaComparable> : CastaliaComparable
     
     public func front() -> T? {
         if !self.empty() {
-            return backingStorage[0]
+            return backingStorage[0].value
         }
         
         return nil
@@ -61,7 +79,7 @@ public class array<T: CastaliaComparable> : CastaliaComparable
     
     public func back() -> T? {
         if backingStorage.endIndex <= self.size() && !self.empty() {
-            return backingStorage[backingStorage.endIndex - 1]
+            return backingStorage[backingStorage.endIndex - 1].value
         }
         
         return nil
@@ -75,9 +93,20 @@ public class array<T: CastaliaComparable> : CastaliaComparable
         
         set(newValue) {
             if position < self.size() {
-                backingStorage[position] = newValue!
+                backingStorage[position].value = newValue!
             }
         }
+    }
+    
+    public func begin() -> iterator {
+        return iterator(head)
+    }
+    
+    public func end() -> iterator {
+        if end_node {
+            end_node!.prev = tail
+        }
+        return iterator(end_node)
     }
     
 }
@@ -99,7 +128,6 @@ public func == <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
 public func != <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return !(lhs == rhs)
 }
-
 
 public func < <T: CastaliaComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     if (lhs.size() < rhs.size()) {

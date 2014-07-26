@@ -13,6 +13,10 @@
 		46F303671982D15900536129 /* array_specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303661982D15900536129 /* array_specs.swift */; };
 		46F303751983A50000536129 /* IntExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303741983A50000536129 /* IntExt.swift */; };
 		46F303781983BAAF00536129 /* CastaliaComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303771983BAAF00536129 /* CastaliaComparable.swift */; };
+		46F3037C1983F60200536129 /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3037B1983F60200536129 /* node.swift */; };
+		46F3037F1983FA7E00536129 /* base_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3037E1983FA7E00536129 /* base_iterator.swift */; };
+		46F303811983FA9200536129 /* random_access_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303801983FA9200536129 /* random_access_iterator.swift */; };
+		46F303831983FAB300536129 /* iterators_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303821983FAB300536129 /* iterators_spec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		46F303661982D15900536129 /* array_specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_specs.swift; sourceTree = "<group>"; };
 		46F303741983A50000536129 /* IntExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExt.swift; sourceTree = "<group>"; };
 		46F303771983BAAF00536129 /* CastaliaComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastaliaComparable.swift; sourceTree = "<group>"; };
+		46F3037B1983F60200536129 /* node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
+		46F3037E1983FA7E00536129 /* base_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = base_iterator.swift; sourceTree = "<group>"; };
+		46F303801983FA9200536129 /* random_access_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_access_iterator.swift; sourceTree = "<group>"; };
+		46F303821983FAB300536129 /* iterators_spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iterators_spec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		46F3033A1982BD1600536129 /* Castalia */ = {
 			isa = PBXGroup;
 			children = (
+				46F3037D1983FA4600536129 /* Iterators */,
 				46F303761983BA6A00536129 /* Protocols */,
 				46F303731983A39800536129 /* Ext */,
 				46F303621982D0BF00536129 /* Collections */,
@@ -140,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				46F303631982D0E600536129 /* array.swift */,
+				46F3037B1983F60200536129 /* node.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				46F303661982D15900536129 /* array_specs.swift */,
+				46F303821983FAB300536129 /* iterators_spec.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -166,6 +177,15 @@
 				46F303771983BAAF00536129 /* CastaliaComparable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		46F3037D1983FA4600536129 /* Iterators */ = {
+			isa = PBXGroup;
+			children = (
+				46F3037E1983FA7E00536129 /* base_iterator.swift */,
+				46F303801983FA9200536129 /* random_access_iterator.swift */,
+			);
+			path = Iterators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F303591982BE0000536129 /* main.swift in Sources */,
+				46F303831983FAB300536129 /* iterators_spec.swift in Sources */,
 				46F303751983A50000536129 /* IntExt.swift in Sources */,
+				46F303811983FA9200536129 /* random_access_iterator.swift in Sources */,
+				46F3037C1983F60200536129 /* node.swift in Sources */,
 				46F303641982D0E600536129 /* array.swift in Sources */,
 				46F303781983BAAF00536129 /* CastaliaComparable.swift in Sources */,
+				46F3037F1983FA7E00536129 /* base_iterator.swift in Sources */,
 				46F303671982D15900536129 /* array_specs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
