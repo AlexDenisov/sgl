@@ -13,7 +13,7 @@ class array_specs : SleipnirSpec {
     
     var spec : () = describe("array") {
         var subject: array<Int>!
-            
+        
         describe("initializion") {
             
             context("with parameters") {
@@ -137,6 +137,72 @@ class array_specs : SleipnirSpec {
                     subject.fill(42)
                     expect(subject.front()).to(equal(42))
                     expect(subject.back()).to(equal(42))
+                }
+                
+            }
+            
+        }
+        
+        describe("comparison") {
+            var rhs: array<Int>!
+            
+            context("equality") {
+                
+                it("of equal arrays") {
+                    subject = array<Int>(1, 2, 3, 4)
+                    rhs = array<Int>(1, 2, 3, 4)
+                    var equal = rhs == subject
+                    expect(equal).to(beTrue())
+                }
+                
+                it("of empty arrays") {
+                    subject = array<Int>()
+                    rhs = array<Int>()
+                    var equal = rhs == subject
+                    expect(equal).to(beTrue())
+                }
+                
+                describe("of non-equal arrays") {
+                    
+                    it("with different size") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(3, 2)
+                        var equal = rhs == subject
+                        expect(equal).toNot(beTrue())
+                    }
+                    
+                    it("with equal size") {
+                        subject = array<Int>(1, 2, 3)
+                        rhs = array<Int>(3, 2, 1)
+                        var equal = rhs == subject
+                        expect(equal).toNot(beTrue())
+                    }
+                    
+                }
+                
+            }
+            
+            context("inequality") {
+                
+                it("of non equal arrays") {
+                    subject = array<Int>(1, 2, 3, 4)
+                    rhs = array<Int>(1, 2, 3)
+                    var equal = rhs != subject
+                    expect(equal).to(beTrue())
+                }
+                
+                it("of empty arrays") {
+                    subject = array<Int>()
+                    rhs = array<Int>()
+                    var equal = rhs != subject
+                    expect(equal).to(beFalse())
+                }
+                
+                it("of equal arrays") {
+                    subject = array<Int>(1, 2, 3)
+                    rhs = array<Int>(1, 2, 3)
+                    var equal = rhs != subject
+                    expect(equal).to(beFalse())
                 }
                 
             }

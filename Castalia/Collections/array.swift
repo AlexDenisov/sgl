@@ -26,7 +26,7 @@ TODO:
 
 */
 
-public class array<T>
+public class array<T: EqualityComparable> : EqualityComparable
 {
     lazy var backingStorage : [T] = [T]()
     
@@ -87,4 +87,22 @@ public class array<T>
         }
     }
     
+}
+
+public func ==<T: EqualityComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+    if lhs.size() != rhs.size() {
+        return false
+    }
+    
+    for index in 0 ..< lhs.size() {
+        if lhs[index]! != rhs[index]! {
+            return false
+        }
+    }
+    
+    return true
+}
+
+public func !=<T: EqualityComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+    return !(lhs == rhs)
 }
