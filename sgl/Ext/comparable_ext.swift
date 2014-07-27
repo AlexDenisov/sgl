@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Int: SGLComparable {
+extension Int: comparable {
 
 }

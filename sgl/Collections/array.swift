@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class array<T: SGLComparable> : SGLComparable
+public class array<T: comparable> : comparable
 {
     public typealias iterator = random_access_iterator<T>
     public typealias reverse_iterator = reverse_random_access_iterator<T>
@@ -111,7 +111,7 @@ public class array<T: SGLComparable> : SGLComparable
     
 }
 
-public func == <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func == <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     if lhs.size() != rhs.size() {
         return false
     }
@@ -125,11 +125,11 @@ public func == <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return true
 }
 
-public func != <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func != <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return !(lhs == rhs)
 }
 
-public func < <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func < <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     if (lhs.size() < rhs.size()) {
         return true
     }
@@ -147,14 +147,14 @@ public func < <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return false
 }
 
-public func > <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func > <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return !(lhs < rhs) && !(lhs == rhs)
 }
 
-public func <= <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func <= <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return (lhs < rhs) || (lhs == rhs)
 }
 
-public func >= <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func >= <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return !(lhs < rhs) || (lhs == rhs)
 }

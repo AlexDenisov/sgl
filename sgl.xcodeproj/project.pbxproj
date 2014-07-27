@@ -10,8 +10,8 @@
 		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
-		46F303751983A50000536129 /* IntExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303741983A50000536129 /* IntExt.swift */; };
-		46F303781983BAAF00536129 /* SGLComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303771983BAAF00536129 /* SGLComparable.swift */; };
+		46F303751983A50000536129 /* comparable_ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303741983A50000536129 /* comparable_ext.swift */; };
+		46F303781983BAAF00536129 /* comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303771983BAAF00536129 /* comparable.swift */; };
 		46F3037C1983F60200536129 /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3037B1983F60200536129 /* node.swift */; };
 		46F3037F1983FA7E00536129 /* base_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3037E1983FA7E00536129 /* base_iterator.swift */; };
 		46F303811983FA9200536129 /* random_access_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303801983FA9200536129 /* random_access_iterator.swift */; };
@@ -72,8 +72,8 @@
 		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		46F303631982D0E600536129 /* array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array.swift; sourceTree = "<group>"; };
-		46F303741983A50000536129 /* IntExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExt.swift; sourceTree = "<group>"; };
-		46F303771983BAAF00536129 /* SGLComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLComparable.swift; sourceTree = "<group>"; };
+		46F303741983A50000536129 /* comparable_ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comparable_ext.swift; sourceTree = "<group>"; };
+		46F303771983BAAF00536129 /* comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comparable.swift; sourceTree = "<group>"; };
 		46F3037B1983F60200536129 /* node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
 		46F3037E1983FA7E00536129 /* base_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = base_iterator.swift; sourceTree = "<group>"; };
 		46F303801983FA9200536129 /* random_access_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_access_iterator.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		46F303731983A39800536129 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
-				46F303741983A50000536129 /* IntExt.swift */,
+				46F303741983A50000536129 /* comparable_ext.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 		46F303761983BA6A00536129 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				46F303771983BAAF00536129 /* SGLComparable.swift */,
+				46F303771983BAAF00536129 /* comparable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -305,13 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F303591982BE0000536129 /* main.swift in Sources */,
-				46F303751983A50000536129 /* IntExt.swift in Sources */,
+				46F303751983A50000536129 /* comparable_ext.swift in Sources */,
 				46F303811983FA9200536129 /* random_access_iterator.swift in Sources */,
 				46F3037C1983F60200536129 /* node.swift in Sources */,
 				46F303A219850D7100536129 /* array_access_spec.swift in Sources */,
 				46F3039C19850D0700536129 /* array_initialization_spec.swift in Sources */,
 				46F303641982D0E600536129 /* array.swift in Sources */,
-				46F303781983BAAF00536129 /* SGLComparable.swift in Sources */,
+				46F303781983BAAF00536129 /* comparable.swift in Sources */,
 				46F303981984EF1F00536129 /* reverse_random_access_iterator.swift in Sources */,
 				46F303A619850E2E00536129 /* array_comparison_spec.swift in Sources */,
 				46F303AE1985110200536129 /* array_iterator_spec.swift in Sources */,

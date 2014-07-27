@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class base_iterator<T> : EqualityComparable
+public class base_iterator<T> : equality_comparable
 {
     var pointee: node<T>?
     init(_ pointee: node<T>?) {

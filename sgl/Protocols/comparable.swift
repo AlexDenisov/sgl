@@ -8,14 +8,14 @@
 
 import Foundation
 
-public protocol EqualityComparable {
+public protocol equality_comparable {
     func == (lhs: Self, rhs: Self) -> Bool
 }
 
-public protocol LessThanComparable {
+public protocol less_than_comparable {
     func < (lhs: Self, rhs: Self) -> Bool
 }
 
-public protocol SGLComparable: LessThanComparable, EqualityComparable {
+public protocol comparable: less_than_comparable, equality_comparable {
     
 }
