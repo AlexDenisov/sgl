@@ -11,13 +11,16 @@ import Sleipnir
 
 class array_mutation_spec : SleipnirSpec
 {
+    typealias SUTArray = array<Int>
+    
     var spec : () = describe("mutation") {
-        var subject: array<Int>!
+
+        var subject: SUTArray!
         
         context("of empty array") {
             
             beforeEach {
-                subject = array<Int>()
+                subject = SUTArray()
             }
             
             it("via subscript") {
@@ -35,7 +38,7 @@ class array_mutation_spec : SleipnirSpec
         context("of non-empty array") {
             
             beforeEach {
-                subject = array<Int>(1, 2, 3, 4)
+                subject = SUTArray(1, 2, 3, 4)
             }
             
             it("via subscript") {

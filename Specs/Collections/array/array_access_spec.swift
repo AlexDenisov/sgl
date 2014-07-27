@@ -11,14 +11,16 @@ import Sleipnir
 
 class array_access_spec : SleipnirSpec
 {
+    typealias SUTArray = array<Int>
+    
     var spec : () = describe("access") {
         
-        var subject: array<Int>!
+        var subject: SUTArray!
         
         context("to empty array returns nil") {
             
             beforeEach {
-                subject = array<Int>()
+                subject = SUTArray()
             }
             
             it("via subscript") {
@@ -42,7 +44,7 @@ class array_access_spec : SleipnirSpec
         context("to non-empty array returns correct value") {
             
             beforeEach {
-                subject = array<Int>(1,2,3,4)
+                subject = SUTArray(1,2,3,4)
             }
             
             it("via subscript") {

@@ -11,14 +11,16 @@ import Sleipnir
 
 class array_initialization_spec : SleipnirSpec
 {
+    typealias SUTArray = array<Int>
+    
     var spec : () = describe("array initializion") {
 
-        var subject: array<Int>!
+        var subject: SUTArray!
         
         context("with parameters") {
             
             beforeEach {
-                subject = array<Int>(1, 2, 3, 4)
+                subject = SUTArray(1, 2, 3, 4)
             }
             
             it("has correct size") {
@@ -34,7 +36,7 @@ class array_initialization_spec : SleipnirSpec
         context("without parameters") {
             
             beforeEach {
-                subject = array<Int>()
+                subject = SUTArray()
             }
             
             it("has correct size") {
