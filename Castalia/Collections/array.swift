@@ -19,13 +19,14 @@ TODO:
 public class array<T: CastaliaComparable> : CastaliaComparable
 {
     public typealias iterator = random_access_iterator<T>
+    public typealias reverse_iterator = reverse_random_access_iterator<T>
     
     lazy var backingStorage : [node<T>] = [node<T>]()
     var head: node<T>?
     var tail: node<T>?
 
-    /// TODO: cleanup
-    var end_node: node<T>?
+    var _begin: node<T> = node()
+    var _end: node<T> = node()
     
     init(_ args: T...) {
         for arg in args {
@@ -37,13 +38,15 @@ public class array<T: CastaliaComparable> : CastaliaComparable
         var newNode = node(value)
         if !head {
             head = newNode
-            end_node = node()
+            head!.prev = _begin
+            _begin.next = head
         } else {
             tail!.next = newNode
+            newNode.prev = tail
         }
-        newNode.prev = tail
         tail = newNode
-        tail!.next = end_node
+        tail!.next = _end
+        _end.prev = tail
         backingStorage.append(newNode)
     }
     
@@ -103,10 +106,15 @@ public class array<T: CastaliaComparable> : CastaliaComparable
     }
     
     public func end() -> iterator {
-        if end_node {
-            end_node!.prev = tail
-        }
-        return iterator(end_node)
+        return iterator(_end)
+    }
+    
+    public func rbegin() -> reverse_iterator {
+        return reverse_iterator(tail)
+    }
+    
+    public func rend() -> reverse_iterator {
+        return reverse_iterator(_begin)
     }
     
 }
