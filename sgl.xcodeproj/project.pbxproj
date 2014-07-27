@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4636662C1985179800C072F5 /* array_compatible_types_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636662B1985179800C072F5 /* array_compatible_types_spec.swift */; };
 		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4636662B1985179800C072F5 /* array_compatible_types_spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_compatible_types_spec.swift; sourceTree = "<group>"; };
 		46F303431982BDE000536129 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
 		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				46F303A519850E2E00536129 /* array_comparison_spec.swift */,
 				46F303AD1985110200536129 /* array_iterator_spec.swift */,
 				46F303AF198511D500536129 /* array_reverse_iterator_spec.swift */,
+				4636662B1985179800C072F5 /* array_compatible_types_spec.swift */,
 			);
 			path = array;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				46F303811983FA9200536129 /* random_access_iterator.swift in Sources */,
 				46F3037C1983F60200536129 /* node.swift in Sources */,
 				46F303A219850D7100536129 /* array_access_spec.swift in Sources */,
+				4636662C1985179800C072F5 /* array_compatible_types_spec.swift in Sources */,
 				46F3039C19850D0700536129 /* array_initialization_spec.swift in Sources */,
 				46F303641982D0E600536129 /* array.swift in Sources */,
 				46F303781983BAAF00536129 /* comparable.swift in Sources */,
