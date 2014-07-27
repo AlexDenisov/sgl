@@ -35,9 +35,18 @@ func += <T>(inout iterator: random_access_iterator<T>, step: Int) -> random_acce
 
 func + <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
     var pointee = iterator.pointee
-    for _ in 0 ..< step {
-        pointee = pointee?.next
+    
+    if step > 0 {
+        for _ in 0 ..< step {
+            pointee = pointee?.next
+        }
+    } else {
+        for _ in 0 ..< (step * -1) {
+            pointee = pointee?.prev
+        }
     }
+    
+
     return random_access_iterator(pointee)
 }
 
@@ -67,8 +76,14 @@ func -= <T>(inout iterator: random_access_iterator<T>, step: Int) -> random_acce
 
 func - <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
     var pointee = iterator.pointee
-    for _ in 0 ..< step {
-        pointee = pointee?.prev
+    if step > 0 {
+        for _ in 0 ..< step {
+            pointee = pointee?.prev
+        }
+    } else {
+        for _ in 0 ..< (step * -1) {
+            pointee = pointee?.next
+        }
     }
     return random_access_iterator(pointee)
 }

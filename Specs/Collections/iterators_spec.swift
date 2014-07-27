@@ -42,73 +42,130 @@ class RandomAccessIteratorSpec: SleipnirSpec
         
         context("normal iterator") {
             
+            var iterator: SUTArray.iterator = SUTArray.iterator(nil)
+            
             describe("arithmetic") {
             
-                it("prefix increment") {
-                    var it = subject.begin()
+                context("increment") {
+                
+                    beforeEach {
+                        iterator = subject.begin()
+                    }
                     
-                    expect((++it).value()).to(equal(3))
-                    expect(it.value()).to(equal(3))
+                    it("prefix") {
+                        expect((++iterator).value()).to(equal(3))
+                        expect(iterator.value()).to(equal(3))
+                    }
+                    
+                    it("postfix") {
+                        expect((iterator++).value()).to(equal(1))
+                        expect(iterator.value()).to(equal(3))
+                    }
+                    
                 }
                 
-                it("postfix increment") {
-                    var it = subject.begin()
+                context("positive constant addition") {
+
+                    beforeEach {
+                        iterator = subject.begin()
+                    }
                     
-                    expect((it++).value()).to(equal(1))
-                    expect(it.value()).to(equal(3))
+                    it("postfix") {
+                        expect((iterator + 2).value()).to(equal(5))
+                    }
+                    
+                    it("prefix") {
+                        expect((2 + iterator).value()).to(equal(5))
+                    }
+                    
+                    it("assignment") {
+                        iterator += 2
+                        expect(iterator.value()).to(equal(5))
+                    }
+                    
                 }
                 
-                it("postfix constant addition") {
-                    var it = subject.begin()
+                context("negative constant addition") {
                     
-                    expect((it + 2).value()).to(equal(5))
+                    beforeEach {
+                        iterator = subject.begin() + 2
+                    }
+                    
+                    it("postfix") {
+                        expect((iterator + -2).value()).to(equal(1))
+                    }
+                    
+                    it("prefix") {
+                        expect((-2 + iterator).value()).to(equal(1))
+                    }
+                    
+                    it("assignment") {
+                        iterator += -2
+                        expect(iterator.value()).to(equal(1))
+                    }
+                    
                 }
                 
-                it("prefix constant addition") {
-                    var it = subject.begin()
+                context("decrement") {
                     
-                    expect((2 + it).value()).to(equal(5))
+                    beforeEach {
+                        iterator = subject.end()
+                    }
+                    
+                    it("prefix") {
+                        expect((--iterator).value()).to(equal(7))
+                        expect(iterator.value()).to(equal(7))
+                    }
+                    
+                    it("postfix") {
+                        expect((iterator--).value()).to(beNil())
+                        expect(iterator.value()).to(equal(7))
+                    }
+                    
+                }
+
+                context("positive constant subtraction") {
+                    
+                    beforeEach {
+                        iterator = subject.end()
+                    }
+                    
+                    it("postfix") {
+                        expect((iterator - 2).value()).to(equal(5))
+                    }
+                    
+                    it("prefix") {
+                        expect((2 - iterator).value()).to(equal(5))
+                    }
+                    
+                    it("assignment") {
+                        iterator -= 2
+                        expect(iterator.value()).to(equal(5))
+                    }
+                    
                 }
                 
-                it("addition assignment") {
-                    var it = subject.begin()
+                context("negative constant subtraction") {
                     
-                    it += 2
-                    expect(it.value()).to(equal(5))
+                    beforeEach {
+                        iterator = subject.end() - 3
+                    }
+                    
+                    it("postfix") {
+                        expect((iterator - -2).value()).to(equal(7))
+                    }
+                    
+                    it("prefix") {
+                        expect((-2 - iterator).value()).to(equal(7))
+                    }
+                    
+                    it("assignment") {
+                        iterator -= -2
+                        expect(iterator.value()).to(equal(7))
+                    }
+                    
                 }
                 
-                it("prefix decrement") {
-                    var it = subject.end()
-                    
-                    expect((--it).value()).to(equal(7))
-                    expect(it.value()).to(equal(7))
-                }
-                
-                it("postfix decrement") {
-                    var it = subject.end()
-                    
-                    expect((it--).value()).to(beNil())
-                    expect(it.value()).to(equal(7))
-                }
-                
-                it("postfix constant subtraction") {
-                    var it = subject.end()
-                    
-                    expect((it - 2).value()).to(equal(5))
-                }
-                
-                it("prefix constant subtraction") {
-                    var it = subject.end()
-                    
-                    expect((2 - it).value()).to(equal(5))
-                }
-                
-                it("subtraction assignment") {
-                    var it = subject.end()
-                    
-                    it -= 2
-                    expect(it.value()).to(equal(5))
-                }
             }
             
             describe("equality") {
