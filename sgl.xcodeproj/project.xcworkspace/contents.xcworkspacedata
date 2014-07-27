@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Castalia.xcodeproj">
+      location = "self:sgl.xcodeproj">
    </FileRef>
 </Workspace>

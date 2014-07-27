@@ -1,6 +1,6 @@
 //
-//  CastaliaComparable.swift
-//  Castalia
+//  SGLComparable.swift
+//  sgl
 //
 //  Created by AlexDenisov on 7/26/14.
 //  Copyright (c) 2014 AlexDenisov. All rights reserved.
@@ -20,6 +20,6 @@ public protocol OrderComparable {
     func >= (lhs: Self, rhs: Self) -> Bool
 }
 
-public protocol CastaliaComparable: OrderComparable, EqualityComparable {
+public protocol SGLComparable: OrderComparable, EqualityComparable {
     
 }

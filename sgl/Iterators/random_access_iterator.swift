@@ -1,6 +1,6 @@
 //
 //  random_access_iterator.swift
-//  Castalia
+//  sgl
 //
 //  Created by AlexDenisov on 7/26/14.
 //  Copyright (c) 2014 AlexDenisov. All rights reserved.
