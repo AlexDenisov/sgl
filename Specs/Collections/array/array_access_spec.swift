@@ -1,0 +1,68 @@
+//
+//  array_access_spec.swift
+//  Castalia
+//
+//  Created by AlexDenisov on 7/27/14.
+//  Copyright (c) 2014 AlexDenisov. All rights reserved.
+//
+
+import Foundation
+import Sleipnir
+
+class array_access_spec : SleipnirSpec
+{
+    var spec : () = describe("access") {
+        
+        var subject: array<Int>!
+        
+        context("to empty array returns nil") {
+            
+            beforeEach {
+                subject = array<Int>()
+            }
+            
+            it("via subscript") {
+                expect(subject[0]).to(beNil())
+            }
+            
+            it("via at()") {
+                expect(subject.at(42)).to(beNil())
+            }
+            
+            it("via front()") {
+                expect(subject.front()).to(beNil())
+            }
+            
+            it("via back()") {
+                expect(subject.back()).to(beNil())
+            }
+            
+        }
+        
+        context("to non-empty array returns correct value") {
+            
+            beforeEach {
+                subject = array<Int>(1,2,3,4)
+            }
+            
+            it("via subscript") {
+                expect(subject[3]).to(equal(4))
+            }
+            
+            it("via at()") {
+                expect(subject.at(2)).to(equal(3))
+            }
+            
+            it("via front()") {
+                expect(subject.front()).to(equal(1))
+            }
+            
+            it("via back()") {
+                expect(subject.back()).to(equal(4))
+            }
+            
+        }
+        
+    }
+    
+}
