@@ -117,7 +117,7 @@ public func == <T: SGLComparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     }
     
     for index in 0 ..< lhs.size() {
-        if lhs[index]! != rhs[index]! {
+        if !(lhs[index]! == rhs[index]!) {
             return false
         }
     }

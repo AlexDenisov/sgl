@@ -10,16 +10,12 @@ import Foundation
 
 public protocol EqualityComparable {
     func == (lhs: Self, rhs: Self) -> Bool
-    func != (lhs: Self, rhs: Self) -> Bool
 }
 
-public protocol OrderComparable {
+public protocol LessThanComparable {
     func < (lhs: Self, rhs: Self) -> Bool
-    func > (lhs: Self, rhs: Self) -> Bool
-    func <= (lhs: Self, rhs: Self) -> Bool
-    func >= (lhs: Self, rhs: Self) -> Bool
 }
 
-public protocol SGLComparable: OrderComparable, EqualityComparable {
+public protocol SGLComparable: LessThanComparable, EqualityComparable {
     
 }
