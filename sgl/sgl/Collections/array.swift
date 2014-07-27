@@ -20,7 +20,7 @@ public class array<T: comparable> : comparable
     var _begin: node<T> = node()
     var _end: node<T> = node()
     
-    init(_ args: T...) {
+    public init(_ args: T...) {
         for arg in args {
             add(arg)
         }

@@ -15,25 +15,25 @@ public class random_access_iterator<T> : base_iterator<T>
     }
 }
 
-@prefix func ++ <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
+@prefix public func ++ <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
     var newIterator = random_access_iterator(iterator.pointee?.next)
     iterator = newIterator
     return newIterator
 }
 
-@postfix func ++ <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
+@postfix public func ++ <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
     var newIterator = random_access_iterator(iterator.pointee?.next)
     var retIterator = iterator
     iterator = newIterator
     return retIterator
 }
 
-func += <T>(inout iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
+public func += <T>(inout iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
     iterator = iterator + step
     return iterator
 }
 
-func + <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
+public func + <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
     var pointee = iterator.pointee
     
     if step > 0 {
@@ -50,18 +50,18 @@ func + <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iter
     return random_access_iterator(pointee)
 }
 
-func + <T>(step: Int, iterator: random_access_iterator<T>) -> random_access_iterator<T> {
+public func + <T>(step: Int, iterator: random_access_iterator<T>) -> random_access_iterator<T> {
     return iterator + step
 }
 
-@prefix func -- <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
+@prefix public func -- <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
     var tail = iterator.pointee?.prev
     var newIterator = random_access_iterator(tail)
     iterator = newIterator
     return newIterator
 }
 
-@postfix func -- <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
+@postfix public func -- <T>(inout iterator: random_access_iterator<T>) -> random_access_iterator<T> {
     var tail = iterator.pointee?.prev
     var newIterator = random_access_iterator(tail)
     var retIterator = iterator
@@ -69,12 +69,12 @@ func + <T>(step: Int, iterator: random_access_iterator<T>) -> random_access_iter
     return retIterator
 }
 
-func -= <T>(inout iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
+public func -= <T>(inout iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
     iterator = iterator - step
     return iterator
 }
 
-func - <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
+public func - <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iterator<T> {
     var pointee = iterator.pointee
     if step > 0 {
         for _ in 0 ..< step {
@@ -88,6 +88,6 @@ func - <T>(iterator: random_access_iterator<T>, step: Int) -> random_access_iter
     return random_access_iterator(pointee)
 }
 
-func - <T>(step: Int, iterator: random_access_iterator<T>) -> random_access_iterator<T> {
+public func - <T>(step: Int, iterator: random_access_iterator<T>) -> random_access_iterator<T> {
     return iterator - step
 }
