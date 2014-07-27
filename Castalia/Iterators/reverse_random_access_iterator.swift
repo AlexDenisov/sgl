@@ -35,8 +35,14 @@ func += <T>(inout iterator: reverse_random_access_iterator<T>, step: Int) -> rev
 
 func + <T>(iterator: reverse_random_access_iterator<T>, step: Int) -> reverse_random_access_iterator<T> {
     var pointee = iterator.pointee
-    for _ in 0 ..< step {
-        pointee = pointee?.prev
+    if step > 0 {
+        for _ in 0 ..< step {
+            pointee = pointee?.prev
+        }
+    } else {
+        for _ in 0 ..< (step * -1) {
+            pointee = pointee?.next
+        }
     }
     return reverse_random_access_iterator(pointee)
 }
@@ -67,8 +73,14 @@ func -= <T>(inout iterator: reverse_random_access_iterator<T>, step: Int) -> rev
 
 func - <T>(iterator: reverse_random_access_iterator<T>, step: Int) -> reverse_random_access_iterator<T> {
     var pointee = iterator.pointee
-    for _ in 0 ..< step {
-        pointee = pointee?.next
+    if step > 0 {
+        for _ in 0 ..< step {
+            pointee = pointee?.next
+        }
+    } else {
+        for _ in 0 ..< (step * -1) {
+            pointee = pointee?.prev
+        }
     }
     return reverse_random_access_iterator(pointee)
 }

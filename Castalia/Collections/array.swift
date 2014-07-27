@@ -8,14 +8,6 @@
 
 import Foundation
 
-/* 
-TODO:
-
-    iterators:
-        rbegin
-        rend
-*/
-
 public class array<T: CastaliaComparable> : CastaliaComparable
 {
     public typealias iterator = random_access_iterator<T>
