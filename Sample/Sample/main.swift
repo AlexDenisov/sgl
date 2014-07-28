@@ -22,21 +22,3 @@ var a = array<Int>(1, 2, 3, 4, 5)
 
 print_array(a.begin(), a.end())
 print_array(a.rend(), a.rbegin())
-
-//var it = a.begin()
-//
-//while it != a.end() {
-//    print((it++).value()!)
-//    print(" ")
-//}
-//
-//println()
-//
-//var rit = a.rbegin()
-//
-//while rit != a.rend() {
-//    print((rit++).value()!)
-//    print(" ")
-//}
-//
-//println()

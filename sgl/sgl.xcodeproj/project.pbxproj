@@ -24,6 +24,7 @@
 		463667711986363800C072F5 /* normal_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667701986363800C072F5 /* normal_bidirectional_iterator.swift */; };
 		46366773198636B400C072F5 /* reverse_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46366772198636B400C072F5 /* reverse_bidirectional_iterator.swift */; };
 		463667751986377E00C072F5 /* random_access_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667741986377E00C072F5 /* random_access_iterator_impl.swift */; };
+		463667AC198640CA00C072F5 /* array_forward_iterator_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667AB198640CA00C072F5 /* array_forward_iterator_spec.swift */; };
 		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
@@ -100,6 +101,7 @@
 		463667701986363800C072F5 /* normal_bidirectional_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normal_bidirectional_iterator.swift; sourceTree = "<group>"; };
 		46366772198636B400C072F5 /* reverse_bidirectional_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reverse_bidirectional_iterator.swift; sourceTree = "<group>"; };
 		463667741986377E00C072F5 /* random_access_iterator_impl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_access_iterator_impl.swift; sourceTree = "<group>"; };
+		463667AB198640CA00C072F5 /* array_forward_iterator_spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_forward_iterator_spec.swift; sourceTree = "<group>"; };
 		46F303431982BDE000536129 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
 		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				46F303AD1985110200536129 /* array_iterator_spec.swift */,
 				46F303AF198511D500536129 /* array_reverse_iterator_spec.swift */,
 				4636662B1985179800C072F5 /* array_compatible_types_spec.swift */,
+				463667AB198640CA00C072F5 /* array_forward_iterator_spec.swift */,
 			);
 			path = array;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				46F3037F1983FA7E00536129 /* base_iterator.swift in Sources */,
 				463667681986316600C072F5 /* normal_random_access_iterator.swift in Sources */,
 				46366763198630FF00C072F5 /* reverse_forward_iterator.swift in Sources */,
+				463667AC198640CA00C072F5 /* array_forward_iterator_spec.swift in Sources */,
 				4636675A19862D5A00C072F5 /* iterator_strategy_protocol.swift in Sources */,
 				463667521986279400C072F5 /* empty_iterator_strategy.swift in Sources */,
 				4636675819862D2800C072F5 /* normal_iterator_strategy.swift in Sources */,
