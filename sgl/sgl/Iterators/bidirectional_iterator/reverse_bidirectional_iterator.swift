@@ -30,4 +30,3 @@ public class reverse_bidirectional_iterator<T> : forward_iterator<T>, iterator_p
 @postfix public func -- <T>(inout iterator: reverse_bidirectional_iterator<T>) -> reverse_bidirectional_iterator<T> {
     return bidirectional_iterator_impl<T, reverse_bidirectional_iterator<T>, reverse_iterator_strategy<T>>().postfix_prev(&iterator)
 }
-

@@ -23,6 +23,7 @@
 		4636676F1986323100C072F5 /* bidirectional_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636676E1986323100C072F5 /* bidirectional_iterator_impl.swift */; };
 		463667711986363800C072F5 /* normal_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667701986363800C072F5 /* normal_bidirectional_iterator.swift */; };
 		46366773198636B400C072F5 /* reverse_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46366772198636B400C072F5 /* reverse_bidirectional_iterator.swift */; };
+		463667751986377E00C072F5 /* random_access_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667741986377E00C072F5 /* random_access_iterator_impl.swift */; };
 		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
@@ -98,6 +99,7 @@
 		4636676E1986323100C072F5 /* bidirectional_iterator_impl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidirectional_iterator_impl.swift; sourceTree = "<group>"; };
 		463667701986363800C072F5 /* normal_bidirectional_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normal_bidirectional_iterator.swift; sourceTree = "<group>"; };
 		46366772198636B400C072F5 /* reverse_bidirectional_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reverse_bidirectional_iterator.swift; sourceTree = "<group>"; };
+		463667741986377E00C072F5 /* random_access_iterator_impl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_access_iterator_impl.swift; sourceTree = "<group>"; };
 		46F303431982BDE000536129 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
 		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				46366753198627F000C072F5 /* forward_iterator_impl.swift */,
 				4636676E1986323100C072F5 /* bidirectional_iterator_impl.swift */,
+				463667741986377E00C072F5 /* random_access_iterator_impl.swift */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463667751986377E00C072F5 /* random_access_iterator_impl.swift in Sources */,
 				46F303591982BE0000536129 /* main.swift in Sources */,
 				46366760198630ED00C072F5 /* forward_iterator.swift in Sources */,
 				46F303751983A50000536129 /* comparable_ext.swift in Sources */,
