@@ -23,6 +23,14 @@ public class reverse_random_access_iterator<T> : base_iterator<T>, iterator_prot
     return forward_iterator_impl<T, reverse_random_access_iterator<T>, reverse_iterator_strategy<T>>().postfix_next(&iterator)
 }
 
+@prefix public func -- <T>(inout iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
+    return bidirectional_iterator_impl<T, reverse_random_access_iterator<T>, reverse_iterator_strategy<T>>().prefix_prev(&iterator)
+}
+
+@postfix public func -- <T>(inout iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
+    return bidirectional_iterator_impl<T, reverse_random_access_iterator<T>, reverse_iterator_strategy<T>>().postfix_prev(&iterator)
+}
+
 public func += <T>(inout iterator: reverse_random_access_iterator<T>, step: Int) -> reverse_random_access_iterator<T> {
     iterator = iterator + step
     return iterator
@@ -44,21 +52,6 @@ public func + <T>(iterator: reverse_random_access_iterator<T>, step: Int) -> rev
 
 public func + <T>(step: Int, iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
     return iterator + step
-}
-
-@prefix public func -- <T>(inout iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
-    var tail = iterator.pointee?.next
-    var newIterator = reverse_random_access_iterator(tail)
-    iterator = newIterator
-    return newIterator
-}
-
-@postfix public func -- <T>(inout iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
-    var tail = iterator.pointee?.next
-    var newIterator = reverse_random_access_iterator(tail)
-    var retIterator = iterator
-    iterator = newIterator
-    return retIterator
 }
 
 public func -= <T>(inout iterator: reverse_random_access_iterator<T>, step: Int) -> reverse_random_access_iterator<T> {
