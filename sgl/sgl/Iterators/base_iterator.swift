@@ -8,7 +8,14 @@
 
 import Foundation
 
-public class base_iterator<T> : equality_comparable
+protocol iterator_protocol
+{
+    typealias T
+    init(_ pointee: node<T>?)
+    var pointee: node<T>? { get set }
+}
+
+public class base_iterator<T> : iterator_protocol, equality_comparable
 {
     var pointee: node<T>?
     init(_ pointee: node<T>?) {

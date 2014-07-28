@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class reverse_random_access_iterator<T> : base_iterator<T>
+public class reverse_random_access_iterator<T> : base_iterator<T>, iterator_protocol
 {
     init(_ pointee: node<T>?) {
         super.init(pointee)
@@ -16,16 +16,11 @@ public class reverse_random_access_iterator<T> : base_iterator<T>
 }
 
 @prefix public func ++ <T>(inout iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
-    var newIterator = reverse_random_access_iterator(iterator.pointee?.prev)
-    iterator = newIterator
-    return newIterator
+    return forward_iterator_impl<T, reverse_random_access_iterator<T>, reverse_iterator_strategy<T>>().prefix_next(&iterator)
 }
 
 @postfix public func ++ <T>(inout iterator: reverse_random_access_iterator<T>) -> reverse_random_access_iterator<T> {
-    var newIterator = reverse_random_access_iterator(iterator.pointee?.prev)
-    var retIterator = iterator
-    iterator = newIterator
-    return retIterator
+    return forward_iterator_impl<T, reverse_random_access_iterator<T>, reverse_iterator_strategy<T>>().postfix_next(&iterator)
 }
 
 public func += <T>(inout iterator: reverse_random_access_iterator<T>, step: Int) -> reverse_random_access_iterator<T> {
