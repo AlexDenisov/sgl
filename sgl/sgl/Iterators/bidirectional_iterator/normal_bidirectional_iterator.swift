@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class normal_bidirectional_iterator<T> : forward_iterator<T>, iterator_protocol
+public class normal_bidirectional_iterator<T> : bidirectional_iterator<T>, iterator_protocol
 {
     init(_ pointee: node<T>?) {
         super.init(pointee)

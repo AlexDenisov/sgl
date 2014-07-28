@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class reverse_random_access_iterator<T> : base_iterator<T>, iterator_protocol
+public class reverse_random_access_iterator<T> : random_access_iterator<T>, iterator_protocol
 {
     init(_ pointee: node<T>?) {
         super.init(pointee)
