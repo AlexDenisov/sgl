@@ -25,6 +25,7 @@
 		46366773198636B400C072F5 /* reverse_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46366772198636B400C072F5 /* reverse_bidirectional_iterator.swift */; };
 		463667751986377E00C072F5 /* random_access_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667741986377E00C072F5 /* random_access_iterator_impl.swift */; };
 		463667AC198640CA00C072F5 /* array_forward_iterator_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463667AB198640CA00C072F5 /* array_forward_iterator_spec.swift */; };
+		466EC685198770C9007A63C6 /* array_bidirectional_iterator_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC684198770C9007A63C6 /* array_bidirectional_iterator_spec.swift */; };
 		46F303591982BE0000536129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303581982BE0000536129 /* main.swift */; };
 		46F3035D1982BE5400536129 /* Sleipnir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F3034D1982BDE000536129 /* Sleipnir.framework */; };
 		46F303641982D0E600536129 /* array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F303631982D0E600536129 /* array.swift */; };
@@ -102,6 +103,7 @@
 		46366772198636B400C072F5 /* reverse_bidirectional_iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reverse_bidirectional_iterator.swift; sourceTree = "<group>"; };
 		463667741986377E00C072F5 /* random_access_iterator_impl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_access_iterator_impl.swift; sourceTree = "<group>"; };
 		463667AB198640CA00C072F5 /* array_forward_iterator_spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_forward_iterator_spec.swift; sourceTree = "<group>"; };
+		466EC684198770C9007A63C6 /* array_bidirectional_iterator_spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_bidirectional_iterator_spec.swift; sourceTree = "<group>"; };
 		46F303431982BDE000536129 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
 		46F303561982BE0000536129 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F303581982BE0000536129 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		6B87663243A2C50FDDE8D4DA /* array */ = {
 			isa = PBXGroup;
 			children = (
+				466EC684198770C9007A63C6 /* array_bidirectional_iterator_spec.swift */,
 				46F3039B19850D0700536129 /* array_initialization_spec.swift */,
 				46F303A119850D7100536129 /* array_access_spec.swift */,
 				46F303A319850DDD00536129 /* array_mutation_spec.swift */,
@@ -418,6 +421,7 @@
 				4636675A19862D5A00C072F5 /* iterator_strategy_protocol.swift in Sources */,
 				463667521986279400C072F5 /* empty_iterator_strategy.swift in Sources */,
 				4636675819862D2800C072F5 /* normal_iterator_strategy.swift in Sources */,
+				466EC685198770C9007A63C6 /* array_bidirectional_iterator_spec.swift in Sources */,
 				46F303A419850DDD00536129 /* array_mutation_spec.swift in Sources */,
 				463667691986316600C072F5 /* random_access_iterator.swift in Sources */,
 				46F303B0198511D500536129 /* array_reverse_iterator_spec.swift in Sources */,
