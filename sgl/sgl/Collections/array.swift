@@ -10,8 +10,8 @@ import Foundation
 
 public class array<T: comparable> : comparable
 {
-    public typealias iterator = normal_random_access_iterator<T>
-    public typealias reverse_iterator = reverse_random_access_iterator<T>
+    public typealias iterator = random_access_iterator<T, normal_iterator_strategy<T>>
+    public typealias reverse_iterator = random_access_iterator<T, reverse_iterator_strategy<T>>
     
     lazy var backingStorage : [node<T>] = [node<T>]()
     var head: node<T>?

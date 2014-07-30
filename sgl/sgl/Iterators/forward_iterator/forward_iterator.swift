@@ -8,17 +8,26 @@
 
 import Foundation
 
-public class forward_iterator<T> : base_iterator<T>, iterator_protocol
+public class forward_iterator<T, S: iterator_strategy_protocol> : base_iterator<T>, iterator_protocol
 {
     init(_ pointee: node<T>?) {
         super.init(pointee)
     }
+    
+    func prefix_next<IT: iterator_protocol>(inout iterator: IT) -> IT {
+        return forward_iterator_impl<T, IT, S>().prefix_next(&iterator)
+    }
+    
+    func postfix_next<IT: iterator_protocol>(inout iterator: IT) -> IT {
+        return forward_iterator_impl<T, IT, S>().postfix_next(&iterator)
+    }
+    
 }
 
-@prefix public func ++ <T>(inout iterator: forward_iterator<T>) -> forward_iterator<T> {
-    return forward_iterator_impl<T, forward_iterator<T>, empty_iterator_strategy<T>>().prefix_next(&iterator)
+@prefix public func ++ <T, S: iterator_strategy_protocol>(inout iterator: forward_iterator<T, S>) -> forward_iterator<T, S> {
+    return iterator.prefix_next(&iterator)
 }
 
-@postfix public func ++ <T>(inout iterator: forward_iterator<T>) -> forward_iterator<T> {
-    return forward_iterator_impl<T, forward_iterator<T>, empty_iterator_strategy<T>>().postfix_next(&iterator)
+@postfix public func ++ <T, S: iterator_strategy_protocol>(inout iterator: forward_iterator<T, S>) -> forward_iterator<T, S> {
+    return iterator.postfix_next(&iterator)
 }

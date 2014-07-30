@@ -8,14 +8,14 @@
 
 import Foundation
 
-class reverse_iterator_strategy<T> : iterator_strategy_protocol
+public class reverse_iterator_strategy<T> : iterator_strategy_protocol
 {
-    init() {}
-    func next_pointee<T>(n: node<T>?) -> node<T>? {
+    public init() {}
+    public func next_pointee<T>(n: node<T>?) -> node<T>? {
         return n?.prev
     }
     
-    func prev_pointee<T>(n: node<T>?) -> node<T>? {
+    public func prev_pointee<T>(n: node<T>?) -> node<T>? {
         return n?.next
     }
 }

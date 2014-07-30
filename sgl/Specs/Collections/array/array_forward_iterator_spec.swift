@@ -9,11 +9,11 @@
 import Foundation
 import Sleipnir
 
-func array_forward_concat<T>(begin: forward_iterator<T>, end: forward_iterator<T>) -> String {
+func array_forward_concat<T, S: iterator_strategy_protocol>(begin: forward_iterator<T, S>, end: forward_iterator<T, S>) -> String {
     var result: String = ""
     var it = begin
     while it != end {
-        var v = (it++).value()
+        var v = (it++).value()!
         result += "\(v) "
     }
     
@@ -24,7 +24,7 @@ class array_forward_iterator_spec : SleipnirSpec
 {
     typealias SUTArray = array<Int>
 
-    var spec : () = xdescribe("array forward iterator") {
+    var spec : () = describe("array forward iterator") {
         var subject: SUTArray!
         
         beforeEach {

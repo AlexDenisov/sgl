@@ -8,7 +8,7 @@
 
 import Foundation
 
-class node<T>
+public class node<T>
 {
     var value: T?
     weak var next: node?

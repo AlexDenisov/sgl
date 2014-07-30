@@ -9,11 +9,11 @@
 import Foundation
 import Sleipnir
 
-func array_bidirectional_concat<T>(begin: bidirectional_iterator<T>, end: bidirectional_iterator<T>) -> String {
+func array_bidirectional_concat<T, S: iterator_strategy_protocol>(begin: bidirectional_iterator<T, S>, end: bidirectional_iterator<T, S>) -> String {
     var result: String = ""
     var it = end
     while it != begin {
-        var v = (--it).value()
+        var v = (--it).value()!
         result += "\(v) "
     }
     
@@ -24,7 +24,7 @@ class array_bidirectional_iterator_spec : SleipnirSpec
 {
     typealias SUTArray = array<Int>
     
-    var spec : () = xdescribe("array bidirectional iterator") {
+    var spec : () = describe("array bidirectional iterator") {
         var subject: SUTArray!
         
         beforeEach {

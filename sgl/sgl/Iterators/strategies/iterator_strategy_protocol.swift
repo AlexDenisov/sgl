@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol iterator_strategy_protocol
+public protocol iterator_strategy_protocol
 {
     init()
     func next_pointee<T>(n: node<T>?) -> node<T>?
