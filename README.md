@@ -1,7 +1,7 @@
 ### SGL - Swift Generic Library. Highly inspired by C++ STL
 
 This simple code
-```
+```swift
 import sgl
 
 func print_array<T, S: iterator_strategy_protocol>(begin: forward_iterator<T, S>, end: forward_iterator<T, S>) {
