@@ -9,7 +9,7 @@
 import Foundation
 import sgl
 
-func print_array<T>(begin: forward_iterator<T>, end: forward_iterator<T>) {
+func print_array<T, S: iterator_strategy_protocol>(begin: forward_iterator<T, S>, end: forward_iterator<T, S>) {
     var it = begin
     while it != end {
         print("\((it++).value()!)")
@@ -21,4 +21,4 @@ func print_array<T>(begin: forward_iterator<T>, end: forward_iterator<T>) {
 var a = array<Int>(1, 2, 3, 4, 5)
 
 print_array(a.begin(), a.end())
-print_array(a.rend(), a.rbegin())
+print_array(a.rbegin(), a.rend())

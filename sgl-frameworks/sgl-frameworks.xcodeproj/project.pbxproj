@@ -13,18 +13,11 @@
 		4636679819863F3200C072F5 /* comparable_ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636677B19863F2800C072F5 /* comparable_ext.swift */; };
 		4636679919863F3200C072F5 /* base_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636677D19863F2800C072F5 /* base_iterator.swift */; };
 		4636679A19863F3200C072F5 /* bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636677F19863F2800C072F5 /* bidirectional_iterator.swift */; };
-		4636679B19863F3200C072F5 /* normal_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678019863F2800C072F5 /* normal_bidirectional_iterator.swift */; };
-		4636679C19863F3200C072F5 /* reverse_bidirectional_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678119863F2800C072F5 /* reverse_bidirectional_iterator.swift */; };
 		4636679D19863F3200C072F5 /* forward_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678319863F2800C072F5 /* forward_iterator.swift */; };
-		4636679E19863F3200C072F5 /* normal_forward_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678419863F2800C072F5 /* normal_forward_iterator.swift */; };
-		4636679F19863F3200C072F5 /* reverse_forward_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678519863F2800C072F5 /* reverse_forward_iterator.swift */; };
 		463667A019863F3200C072F5 /* bidirectional_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678719863F2800C072F5 /* bidirectional_iterator_impl.swift */; };
 		463667A119863F3200C072F5 /* forward_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678819863F2800C072F5 /* forward_iterator_impl.swift */; };
 		463667A219863F3200C072F5 /* random_access_iterator_impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678919863F2800C072F5 /* random_access_iterator_impl.swift */; };
-		463667A319863F3200C072F5 /* normal_random_access_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678C19863F2800C072F5 /* normal_random_access_iterator.swift */; };
 		463667A419863F3200C072F5 /* random_access_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678D19863F2800C072F5 /* random_access_iterator.swift */; };
-		463667A519863F3200C072F5 /* reverse_random_access_iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636678E19863F2800C072F5 /* reverse_random_access_iterator.swift */; };
-		463667A619863F3200C072F5 /* empty_iterator_strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636679019863F2800C072F5 /* empty_iterator_strategy.swift */; };
 		463667A719863F3200C072F5 /* iterator_strategy_protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636679119863F2800C072F5 /* iterator_strategy_protocol.swift */; };
 		463667A819863F3200C072F5 /* normal_iterator_strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636679219863F2800C072F5 /* normal_iterator_strategy.swift */; };
 		463667A919863F3200C072F5 /* reverse_iterator_strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636679319863F2800C072F5 /* reverse_iterator_strategy.swift */; };
@@ -295,18 +288,11 @@
 				4636679819863F3200C072F5 /* comparable_ext.swift in Sources */,
 				4636679919863F3200C072F5 /* base_iterator.swift in Sources */,
 				4636679A19863F3200C072F5 /* bidirectional_iterator.swift in Sources */,
-				4636679B19863F3200C072F5 /* normal_bidirectional_iterator.swift in Sources */,
-				4636679C19863F3200C072F5 /* reverse_bidirectional_iterator.swift in Sources */,
 				4636679D19863F3200C072F5 /* forward_iterator.swift in Sources */,
-				4636679E19863F3200C072F5 /* normal_forward_iterator.swift in Sources */,
-				4636679F19863F3200C072F5 /* reverse_forward_iterator.swift in Sources */,
 				463667A019863F3200C072F5 /* bidirectional_iterator_impl.swift in Sources */,
 				463667A119863F3200C072F5 /* forward_iterator_impl.swift in Sources */,
 				463667A219863F3200C072F5 /* random_access_iterator_impl.swift in Sources */,
-				463667A319863F3200C072F5 /* normal_random_access_iterator.swift in Sources */,
 				463667A419863F3200C072F5 /* random_access_iterator.swift in Sources */,
-				463667A519863F3200C072F5 /* reverse_random_access_iterator.swift in Sources */,
-				463667A619863F3200C072F5 /* empty_iterator_strategy.swift in Sources */,
 				463667A719863F3200C072F5 /* iterator_strategy_protocol.swift in Sources */,
 				463667A819863F3200C072F5 /* normal_iterator_strategy.swift in Sources */,
 				463667A919863F3200C072F5 /* reverse_iterator_strategy.swift in Sources */,
