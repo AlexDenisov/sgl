@@ -10,19 +10,19 @@ import Foundation
 
 protocol iterator_protocol
 {
-    typealias T
-    init(_ pointee: node<T>?)
-    var pointee: node<T>? { get set }
+    typealias Type
+    init(_ pointee: node<Type>?)
+    var pointee: node<Type>? { get set }
 }
 
-public class base_iterator<T> : iterator_protocol, equality_comparable
+public class base_iterator<Type> : iterator_protocol, equality_comparable
 {
-    var pointee: node<T>?
-    init(_ pointee: node<T>?) {
+    var pointee: node<Type>?
+    init(_ pointee: node<Type>?) {
         self.pointee = pointee
     }
     
-    public func value() -> T? {
+    public func value() -> Type? {
         if pointee {
             return pointee!.value
         }
@@ -31,10 +31,10 @@ public class base_iterator<T> : iterator_protocol, equality_comparable
     }
 }
 
-public func == <T>(lhs: base_iterator<T>, rhs: base_iterator<T>) -> Bool {
+public func == <Type>(lhs: base_iterator<Type>, rhs: base_iterator<Type>) -> Bool {
     return lhs.pointee === rhs.pointee
 }
 
-public func != <T>(lhs: base_iterator<T>, rhs: base_iterator<T>) -> Bool {
+public func != <Type>(lhs: base_iterator<Type>, rhs: base_iterator<Type>) -> Bool {
     return !(lhs == rhs)
 }

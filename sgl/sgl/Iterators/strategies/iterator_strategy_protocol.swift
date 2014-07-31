@@ -11,6 +11,6 @@ import Foundation
 public protocol iterator_strategy_protocol
 {
     init()
-    func next_pointee<T>(n: node<T>?) -> node<T>?
-    func prev_pointee<T>(n: node<T>?) -> node<T>?
+    func next_pointee<Type>(n: node<Type>?) -> node<Type>?
+    func prev_pointee<Type>(n: node<Type>?) -> node<Type>?
 }

@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class normal_iterator_strategy<T> : iterator_strategy_protocol
+public class normal_iterator_strategy<Type> : iterator_strategy_protocol
 {
     public init() {}
-    public func next_pointee<T>(n: node<T>?) -> node<T>? {
+    public func next_pointee<Type>(n: node<Type>?) -> node<Type>? {
         return n?.next
     }
     
-    public func prev_pointee<T>(n: node<T>?) -> node<T>? {
+    public func prev_pointee<Type>(n: node<Type>?) -> node<Type>? {
         return n?.prev
     }
 }

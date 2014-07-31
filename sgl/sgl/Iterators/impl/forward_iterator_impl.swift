@@ -8,18 +8,18 @@
 
 import Foundation
 
-class forward_iterator_impl<T, iterator: iterator_protocol, strategy: iterator_strategy_protocol>
+class forward_iterator_impl<Type, Iterator: iterator_protocol, Strategy: iterator_strategy_protocol>
 {
-    func prefix_next(inout it: iterator) -> iterator {
-        var s = strategy()
-        var newIterator = iterator(s.next_pointee(it.pointee))
+    func prefix_next(inout it: Iterator) -> Iterator {
+        var s = Strategy()
+        var newIterator = Iterator(s.next_pointee(it.pointee))
         it = newIterator
         return newIterator
     }
     
-    func postfix_next(inout it: iterator) -> iterator {
-        var s = strategy()
-        var newIterator = iterator(s.next_pointee(it.pointee))
+    func postfix_next(inout it: Iterator) -> Iterator {
+        var s = Strategy()
+        var newIterator = Iterator(s.next_pointee(it.pointee))
         var retIterator = it
         it = newIterator
         return retIterator

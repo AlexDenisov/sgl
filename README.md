@@ -7,8 +7,8 @@ import sgl
 func print_array<T, S: iterator_strategy_protocol>(begin: forward_iterator<T, S>, end: forward_iterator<T, S>) {
     var it = begin
     while it != end {
-        print("\((it++).value()!)")
-        print(" ")
+        let value = (it++).value()!
+        print("\(value) ")
     }
     println()
 }

@@ -8,10 +8,10 @@
 
 import Foundation
 
-class random_access_iterator_impl<T, iterator: iterator_protocol, strategy: iterator_strategy_protocol> : bidirectional_iterator_impl<T, iterator, strategy>
+class random_access_iterator_impl<Type, Iterator: iterator_protocol, Strategy: iterator_strategy_protocol> : bidirectional_iterator_impl<Type, Iterator, Strategy>
 {
-    func move_forward(it: iterator, step: Int) -> iterator {
-        var s = strategy()
+    func move_forward(it: Iterator, step: Int) -> Iterator {
+        var s = Strategy()
         var pointee = it.pointee
         
         if step > 0 {
@@ -24,11 +24,11 @@ class random_access_iterator_impl<T, iterator: iterator_protocol, strategy: iter
             }
         }
         
-        return iterator(pointee)
+        return Iterator(pointee)
     }
     
-    func move_backward(it: iterator, step: Int) -> iterator {
-        var s = strategy()
+    func move_backward(it: Iterator, step: Int) -> Iterator {
+        var s = Strategy()
         var pointee = it.pointee
         
         if step > 0 {
@@ -41,15 +41,15 @@ class random_access_iterator_impl<T, iterator: iterator_protocol, strategy: iter
             }
         }
         
-        return iterator(pointee)
+        return Iterator(pointee)
     }
     
-    func move_forward_and_assign(inout it: iterator, step: Int) -> iterator {
+    func move_forward_and_assign(inout it: Iterator, step: Int) -> Iterator {
         it = move_forward(it, step: step)
         return it
     }
     
-    func move_backward_and_assign(inout it: iterator, step: Int) -> iterator {
+    func move_backward_and_assign(inout it: Iterator, step: Int) -> Iterator {
         it = move_backward(it, step: step)
         return it
     }

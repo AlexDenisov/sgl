@@ -8,16 +8,16 @@
 
 import Foundation
 
-public class node<T>
+public class node<Type>
 {
-    var value: T?
+    var value: Type?
     weak var next: node?
     weak var prev: node?
     
     init() {
     }
     
-    init(_ value: T) {
+    init(_ value: Type) {
         self.value = value
     }
 }

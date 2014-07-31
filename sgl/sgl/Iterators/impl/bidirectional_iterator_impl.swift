@@ -8,21 +8,21 @@
 
 import Foundation
 
-class bidirectional_iterator_impl<T, iterator: iterator_protocol, strategy: iterator_strategy_protocol> : forward_iterator_impl<T, iterator, strategy>
+class bidirectional_iterator_impl<Type, Iterator: iterator_protocol, Strategy: iterator_strategy_protocol> : forward_iterator_impl<Type, Iterator, Strategy>
 {
-    func prefix_prev(inout it: iterator) -> iterator {
-        var s = strategy()
+    func prefix_prev(inout it: Iterator) -> Iterator {
+        var s = Strategy()
         var tail = s.prev_pointee(it.pointee)
-        var newIterator = iterator(tail)
+        var newIterator = Iterator(tail)
         it = newIterator
         return newIterator
     }
     
-    func postfix_prev(inout it: iterator) -> iterator {
-        var s = strategy()
+    func postfix_prev(inout it: Iterator) -> Iterator {
+        var s = Strategy()
         var tail = s.prev_pointee(it.pointee)
         
-        var newIterator = iterator(tail)
+        var newIterator = Iterator(tail)
         var retIterator = it
         it = newIterator
         return retIterator

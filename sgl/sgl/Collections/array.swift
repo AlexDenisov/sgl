@@ -8,25 +8,25 @@
 
 import Foundation
 
-public class array<T: comparable> : comparable
+public class array<Type: comparable> : comparable
 {
-    public typealias iterator = random_access_iterator<T, normal_iterator_strategy<T>>
-    public typealias reverse_iterator = random_access_iterator<T, reverse_iterator_strategy<T>>
+    public typealias iterator = random_access_iterator<Type, normal_iterator_strategy<Type>>
+    public typealias reverse_iterator = random_access_iterator<Type, reverse_iterator_strategy<Type>>
     
-    lazy var backingStorage : [node<T>] = [node<T>]()
-    var head: node<T>?
-    var tail: node<T>?
+    lazy var backingStorage : [node<Type>] = [node<Type>]()
+    var head: node<Type>?
+    var tail: node<Type>?
 
-    var _begin: node<T> = node()
-    var _end: node<T> = node()
+    var _begin: node<Type> = node()
+    var _end: node<Type> = node()
     
-    public init(_ args: T...) {
+    public init(_ args: Type...) {
         for arg in args {
             add(arg)
         }
     }
     
-    func add(value: T) {
+    func add(value: Type) {
         var newNode = node(value)
         if !head {
             head = newNode
@@ -50,13 +50,13 @@ public class array<T: comparable> : comparable
         return backingStorage.count
     }
     
-    public func fill(value: T) {
+    public func fill(value: Type) {
         for i in 0 ..< self.size() {
             self[i] = value
         }
     }
     
-    public func at(position: Int) -> T? {
+    public func at(position: Int) -> Type? {
         if position < self.size() && !self.empty() {
             return backingStorage[position].value
         }
@@ -64,7 +64,7 @@ public class array<T: comparable> : comparable
         return nil
     }
     
-    public func front() -> T? {
+    public func front() -> Type? {
         if !self.empty() {
             return backingStorage[0].value
         }
@@ -72,7 +72,7 @@ public class array<T: comparable> : comparable
         return nil
     }
     
-    public func back() -> T? {
+    public func back() -> Type? {
         if backingStorage.endIndex <= self.size() && !self.empty() {
             return backingStorage[backingStorage.endIndex - 1].value
         }
@@ -80,7 +80,7 @@ public class array<T: comparable> : comparable
         return nil
     }
     
-    subscript(position: Int) -> T? {
+    subscript(position: Int) -> Type? {
         
         get {
             return at(position)
@@ -111,7 +111,7 @@ public class array<T: comparable> : comparable
     
 }
 
-public func == <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func == <Type: comparable>(lhs: array<Type>, rhs: array<Type>) -> Bool {
     if lhs.size() != rhs.size() {
         return false
     }
@@ -125,11 +125,11 @@ public func == <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return true
 }
 
-public func != <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func != <Type: comparable>(lhs: array<Type>, rhs: array<Type>) -> Bool {
     return !(lhs == rhs)
 }
 
-public func < <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func < <Type: comparable>(lhs: array<Type>, rhs: array<Type>) -> Bool {
     if (lhs.size() < rhs.size()) {
         return true
     }
@@ -147,14 +147,14 @@ public func < <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
     return false
 }
 
-public func > <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func > <Type: comparable>(lhs: array<Type>, rhs: array<Type>) -> Bool {
     return !(lhs < rhs) && !(lhs == rhs)
 }
 
-public func <= <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func <= <Type: comparable>(lhs: array<Type>, rhs: array<Type>) -> Bool {
     return (lhs < rhs) || (lhs == rhs)
 }
 
-public func >= <T: comparable>(lhs: array<T>, rhs: array<T>) -> Bool {
+public func >= <Type: comparable>(lhs: array<Type>, rhs: array<Type>) -> Bool {
     return !(lhs < rhs) || (lhs == rhs)
 }
