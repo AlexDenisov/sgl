@@ -28,7 +28,7 @@ public class array<Type: comparable> : comparable
     
     func add(value: Type) {
         var newNode = node(value)
-        if !head {
+        if head == nil {
             head = newNode
             head!.prev = _begin
             _begin.next = head

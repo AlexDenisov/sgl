@@ -18,12 +18,12 @@ protocol iterator_protocol
 public class base_iterator<Type> : iterator_protocol, equality_comparable
 {
     var pointee: node<Type>?
-    init(_ pointee: node<Type>?) {
+    required public init(_ pointee: node<Type>?) {
         self.pointee = pointee
     }
     
     public func value() -> Type? {
-        if pointee {
+        if pointee != nil {
             return pointee!.value
         }
         

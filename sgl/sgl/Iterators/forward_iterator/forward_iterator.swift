@@ -10,7 +10,7 @@ import Foundation
 
 public class forward_iterator<Type, Strategy: iterator_strategy_protocol> : base_iterator<Type>, iterator_protocol
 {
-    init(_ pointee: node<Type>?) {
+    required public init(_ pointee: node<Type>?) {
         super.init(pointee)
     }
     
@@ -24,10 +24,10 @@ public class forward_iterator<Type, Strategy: iterator_strategy_protocol> : base
     
 }
 
-@prefix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: forward_iterator<Type, Strategy>) -> forward_iterator<Type, Strategy> {
+prefix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: forward_iterator<Type, Strategy>) -> forward_iterator<Type, Strategy> {
     return iterator.prefix_next(&iterator)
 }
 
-@postfix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: forward_iterator<Type, Strategy>) -> forward_iterator<Type, Strategy> {
+postfix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: forward_iterator<Type, Strategy>) -> forward_iterator<Type, Strategy> {
     return iterator.postfix_next(&iterator)
 }

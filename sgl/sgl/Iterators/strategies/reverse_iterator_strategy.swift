@@ -10,7 +10,7 @@ import Foundation
 
 public class reverse_iterator_strategy<Type> : iterator_strategy_protocol
 {
-    public init() {}
+    public required init() {}
     public func next_pointee<Type>(n: node<Type>?) -> node<Type>? {
         return n?.prev
     }

@@ -10,7 +10,7 @@ import Foundation
 
 public class bidirectional_iterator<Type, Strategy: iterator_strategy_protocol> : forward_iterator<Type, Strategy>, iterator_protocol
 {
-    init(_ pointee: node<Type>?) {
+    required public init(_ pointee: node<Type>?) {
         super.init(pointee)
     }
     
@@ -24,18 +24,18 @@ public class bidirectional_iterator<Type, Strategy: iterator_strategy_protocol> 
     
 }
 
-@prefix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
+prefix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
     return iterator.prefix_next(&iterator)
 }
 
-@postfix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
+postfix public func ++ <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
     return iterator.postfix_next(&iterator)
 }
 
-@prefix public func -- <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
+prefix public func -- <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
     return iterator.prefix_prev(&iterator)
 }
 
-@postfix public func -- <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
+postfix public func -- <Type, Strategy: iterator_strategy_protocol>(inout iterator: bidirectional_iterator<Type, Strategy>) -> bidirectional_iterator<Type, Strategy> {
     return iterator.postfix_prev(&iterator)
 }
